@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:health_scan_pro/core/utils/app_colors.dart';
 
@@ -9,6 +10,7 @@ class CustomBtn extends StatelessWidget {
     required this.text,
     this.onPressed,
   });
+  
   final String image;
   final String text;
   final void Function()? onPressed;
@@ -19,26 +21,25 @@ class CustomBtn extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 50),
       child: MaterialButton(
         onPressed: onPressed,
-        height: 60,
-        color: AppColors.primaryColor,
+        height: MediaQuery.of(context).size.height * 0.068,
+        color: AppColors.btnColor,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(10),
         ),
         child: Row(
-          // mainAxisAlignment: MainAxisAlignment.center,
           children: [
             SvgPicture.asset(
               image,
             ),
-            const SizedBox(
-              width: 20,
+            SizedBox(
+              width: MediaQuery.of(context).size.width * 0.05,
             ),
             Text(
               text,
-              style: const TextStyle(
+              style: TextStyle(
                 color: Colors.white,
                 fontFamily: "Cormorant SC",
-                fontSize: 18,
+                fontSize: 18.sp,
                 fontWeight: FontWeight.w700,
               ),
             ),

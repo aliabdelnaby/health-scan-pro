@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomCardItem extends StatelessWidget {
   const CustomCardItem({
@@ -16,8 +17,8 @@ class CustomCardItem extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: Container(
-        width: 340,
-        height: 108,
+        width: MediaQuery.of(context).size.width * 0.9,
+        height: MediaQuery.of(context).size.height * 0.125,
         padding: const EdgeInsets.all(10),
         margin: const EdgeInsets.all(10),
         decoration: BoxDecoration(
@@ -36,15 +37,15 @@ class CustomCardItem extends StatelessWidget {
           children: [
             Image.asset(
               image,
-              height: 55,
-              width: 50,
+              height: MediaQuery.of(context).size.height * 0.05,
+              width: MediaQuery.of(context).size.width * 0.3,
             ),
-            const SizedBox(height: 5),
+            SizedBox(height: MediaQuery.of(context).size.height * 0.02),
             Text(
               text,
               style: TextStyle(
                 fontFamily: "Crimson Text",
-                fontSize: 14,
+                fontSize: 14.sp,
                 fontWeight: FontWeight.w700,
                 color: const Color(0xff2D0C80).withOpacity(0.8),
               ),

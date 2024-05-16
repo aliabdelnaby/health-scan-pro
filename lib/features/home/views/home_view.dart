@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:health_scan_pro/core/functions/navigation.dart';
 import 'package:health_scan_pro/core/utils/app_colors.dart';
 import 'package:health_scan_pro/core/utils/assets.dart';
@@ -11,10 +12,10 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
+        title: Text(
           "Home",
           style: TextStyle(
-            fontSize: 25,
+            fontSize: 25.sp,
             fontFamily: "Crimson Text",
             color: Colors.white,
             fontWeight: FontWeight.w400,
@@ -28,12 +29,12 @@ class HomeScreen extends StatelessWidget {
             Text(
               "Choose Your Disease ...",
               style: TextStyle(
-                fontSize: 18,
+                fontSize: 18.sp,
                 color: AppColors.primaryColor,
                 fontWeight: FontWeight.bold,
               ),
             ),
-            const SizedBox(height: 35),
+            SizedBox(height: MediaQuery.of(context).size.height * 0.05),
             CustomCardItem(
               onTap: () {
                 customNavigate(context, "/covid-19");
@@ -41,7 +42,7 @@ class HomeScreen extends StatelessWidget {
               image: Assets.imagesCovidIcon,
               text: 'COVID-19',
             ),
-            const SizedBox(height: 35),
+            SizedBox(height: MediaQuery.of(context).size.height * 0.04),
             CustomCardItem(
               onTap: () {
                 customNavigate(context, "/brain");
@@ -49,7 +50,7 @@ class HomeScreen extends StatelessWidget {
               image: Assets.imagesBrainIcon,
               text: 'Brain',
             ),
-            const SizedBox(height: 35),
+            SizedBox(height: MediaQuery.of(context).size.height * 0.04),
             CustomCardItem(
               onTap: () {
                 customNavigate(context, "/kidney");
@@ -57,26 +58,26 @@ class HomeScreen extends StatelessWidget {
               image: Assets.imagesKidney,
               text: "Kidney",
             ),
-            const SizedBox(height: 35),
+            SizedBox(height: MediaQuery.of(context).size.height * 0.04),
             Text(
               "Explore more about your health journey by navigating through our website.",
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontFamily: "Cormorant SC",
-                fontSize: 22,
+                fontSize: 22.sp,
                 fontWeight: FontWeight.w400,
                 color: AppColors.primaryColor,
               ),
             ),
-            const SizedBox(height: 35),
-            const Text(
+            SizedBox(height: MediaQuery.of(context).size.height * 0.04),
+            Text(
               "www.healthscanpro.com",
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontFamily: "Cormorant SC",
-                fontSize: 15,
+                fontSize: 15.sp,
                 fontWeight: FontWeight.w400,
-                color: Color(0xff00A3FF),
+                color: const Color(0xff00A3FF),
               ),
             ),
           ],

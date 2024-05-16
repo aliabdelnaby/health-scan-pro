@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:health_scan_pro/core/functions/navigation.dart';
 import 'package:health_scan_pro/core/utils/assets.dart';
 import 'package:health_scan_pro/features/home/widgets/custom_btn.dart';
@@ -10,10 +11,10 @@ class KidneyScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
+        title: Text(
           "Kidney Scanner",
           style: TextStyle(
-            fontSize: 25,
+            fontSize: 24.sp,
             fontFamily: "Crimson Text",
             color: Colors.white,
             fontWeight: FontWeight.w400,
@@ -29,20 +30,19 @@ class KidneyScreen extends StatelessWidget {
               onPressed: () {
                 customPopNavigate(context);
               },
-              icon: const Icon(
+              icon: Icon(
                 Icons.arrow_circle_left_outlined,
-                color: Color(0xff9000FF),
-                size: 26,
+                color: const Color(0xff9000FF),
+                size: 26.sp,
               ),
             ),
           ),
-          const SizedBox(height: 25),
+          SizedBox(height: MediaQuery.of(context).size.height * 0.04),
           Image.asset(
             Assets.imagesKidney,
-            height: 140,
-            width: 92,
+            height: MediaQuery.of(context).size.height * 0.17,
           ),
-          const SizedBox(height: 50),
+          SizedBox(height: MediaQuery.of(context).size.height * 0.08),
           CustomBtn(
             onPressed: () {
               customNavigate(context, "/result");
@@ -50,21 +50,21 @@ class KidneyScreen extends StatelessWidget {
             text: "Upload a photo",
             image: Assets.imagesUplaodimage,
           ),
-          const SizedBox(height: 35),
+          SizedBox(height: MediaQuery.of(context).size.height * 0.04),
           CustomBtn(
             onPressed: () {},
             text: "Scan a photo",
             image: Assets.imagesScanIcon,
           ),
-          const SizedBox(height: 300),
-          const Text(
+          SizedBox(height: MediaQuery.of(context).size.height * 0.3),
+          Text(
             "www.healthscanpro.com",
             textAlign: TextAlign.center,
             style: TextStyle(
               fontFamily: "Cormorant SC",
-              fontSize: 15,
+              fontSize: 15.sp,
               fontWeight: FontWeight.w400,
-              color: Color(0xff00A3FF),
+              color: const Color(0xff00A3FF),
             ),
           ),
         ],
