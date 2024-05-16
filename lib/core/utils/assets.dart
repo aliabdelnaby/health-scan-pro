@@ -22,8 +22,8 @@ class Assets {
   static const String imagesIconLung = "assets/images/iconLung.svg";
 
   /// Assets for imagesImagesResult
-  /// assets/images/images_result.svg
-  static const String imagesImagesResult = "assets/images/images_result.svg";
+  /// assets/images/images_result.png
+  static const String imagesImagesResult = "assets/images/images_result.png";
 
   /// Assets for imagesIntroIcon
   /// assets/images/intro_icon.svg

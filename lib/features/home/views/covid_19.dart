@@ -44,7 +44,9 @@ class Covid19Screen extends StatelessWidget {
           ),
           const SizedBox(height: 50),
           CustomBtn(
-            onPressed: () {},
+            onPressed: () {
+              customNavigate(context, "/result");
+            },
             text: "Upload a photo",
             image: Assets.imagesUplaodimage,
           ),

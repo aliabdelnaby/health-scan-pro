@@ -3,6 +3,7 @@ import 'package:health_scan_pro/features/home/views/brain.dart';
 import 'package:health_scan_pro/features/home/views/covid_19.dart';
 import 'package:health_scan_pro/features/home/views/home_view.dart';
 import 'package:health_scan_pro/features/home/views/kidney.dart';
+import 'package:health_scan_pro/features/home/views/result.dart';
 import 'package:health_scan_pro/features/intro/views/intro.dart';
 
 final GoRouter router = GoRouter(
@@ -26,6 +27,10 @@ final GoRouter router = GoRouter(
     GoRoute(
       path: '/kidney',
       builder: ((context, state) => const KidneyScreen()),
+    ),
+    GoRoute(
+      path: '/result',
+      builder: ((context, state) => const ResultScreen()),
     ),
   ],
 );
