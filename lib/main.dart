@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:health_scan_pro/intro/views/intro.dart';
+import 'package:health_scan_pro/core/router/app_router.dart';
+import 'package:health_scan_pro/core/utils/app_colors.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,9 +11,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp.router(
+      routerConfig: router,
       debugShowCheckedModeBanner: false,
-      home: IntroScreen(),
+      theme: ThemeData(
+        scaffoldBackgroundColor: AppColors.scaffoldColor,
+        appBarTheme: AppBarTheme(
+          backgroundColor: AppColors.primaryColor,
+        ),
+      ),
     );
   }
 }
