@@ -5,13 +5,17 @@ class Assets {
   /// assets/images/arrow-circle.svg
   static const String imagesArrowCircle = "assets/images/arrow-circle.svg";
 
+  /// Assets for imagesBrainIcon
+  /// assets/images/brainIcon.jpg
+  static const String imagesBrainIcon = "assets/images/brainIcon.jpg";
+
+  /// Assets for imagesCovidIcon
+  /// assets/images/covidIcon.jpg
+  static const String imagesCovidIcon = "assets/images/covidIcon.jpg";
+
   /// Assets for imagesIconHeart
   /// assets/images/iconHeart.svg
   static const String imagesIconHeart = "assets/images/iconHeart.svg";
-
-  /// Assets for imagesIconKidney
-  /// assets/images/iconKidney.svg
-  static const String imagesIconKidney = "assets/images/iconKidney.svg";
 
   /// Assets for imagesIconLung
   /// assets/images/iconLung.svg
@@ -24,6 +28,10 @@ class Assets {
   /// Assets for imagesIntroIcon
   /// assets/images/intro_icon.svg
   static const String imagesIntroIcon = "assets/images/intro_icon.svg";
+
+  /// Assets for imagesKidney
+  /// assets/images/kidney.png
+  static const String imagesKidney = "assets/images/kidney.png";
 
   /// Assets for imagesScanIcon
   /// assets/images/scanIcon.svg
