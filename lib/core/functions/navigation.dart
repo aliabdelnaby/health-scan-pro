@@ -8,6 +8,6 @@ void customReplacementNavigate(context, String path) {
   GoRouter.of(context).pushReplacement(path);
 }
 
-void customPopNavigate(context, String path) {
-  GoRouter.of(context).pop(path);
+void customPopNavigate(context) {
+  GoRouter.of(context).pop();
 }

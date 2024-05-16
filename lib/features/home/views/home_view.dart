@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:health_scan_pro/core/functions/navigation.dart';
 import 'package:health_scan_pro/core/utils/app_colors.dart';
 import 'package:health_scan_pro/core/utils/assets.dart';
-import 'package:health_scan_pro/home/widgets/custom_card_item.dart';
+import 'package:health_scan_pro/features/home/widgets/custom_card_item.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -34,21 +35,27 @@ class HomeScreen extends StatelessWidget {
             ),
             const SizedBox(height: 35),
             CustomCardItem(
-              onTap: () {},
+              onTap: () {
+                customNavigate(context, "/covid-19");
+              },
               image: Assets.imagesCovidIcon,
               text: 'COVID-19',
             ),
             const SizedBox(height: 35),
             CustomCardItem(
-              onTap: () {},
+              onTap: () {
+                customNavigate(context, "/brain");
+              },
               image: Assets.imagesBrainIcon,
               text: 'Brain',
             ),
             const SizedBox(height: 35),
             CustomCardItem(
-              onTap: () {},
+              onTap: () {
+                customNavigate(context, "/kidney");
+              },
               image: Assets.imagesKidney,
-              text: "Kindey",
+              text: "Kidney",
             ),
             const SizedBox(height: 35),
             Text(
@@ -59,6 +66,17 @@ class HomeScreen extends StatelessWidget {
                 fontSize: 22,
                 fontWeight: FontWeight.w400,
                 color: AppColors.primaryColor,
+              ),
+            ),
+            const SizedBox(height: 35),
+            const Text(
+              "www.healthscanpro.com",
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontFamily: "Cormorant SC",
+                fontSize: 15,
+                fontWeight: FontWeight.w400,
+                color: Color(0xff00A3FF),
               ),
             ),
           ],
